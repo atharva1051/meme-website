@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 def get_meme():
 
-    url = "https://meme-api.com/gimme/ProgrammerHumor"
+    url = "https://meme-api.com/gimme/IndianDankMemes"
     response = json.loads(requests.request("GET",url).text)
     meme_large = response["preview"][-2]
     subreddit = response["subreddit"]
@@ -22,4 +22,4 @@ def index():
     print(meme_pic)
     return render_template("meme_index.html",meme_pic = meme_pic, subreddit = subreddit)
 
-app.run(host="0.0.0.0",port=80)
+app.run(host="0.0.0.0",port=3000)

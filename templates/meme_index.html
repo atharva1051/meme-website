@@ -4,22 +4,39 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="refresh" content="30"> 
         <style>
-      body {
+          body {
         background-color: #f0f0f0;
         text-align: center;
-      }
-      img {
+        }
+        img {
         max-width: 100%;
         height: auto;
         margin: 30px 0;
         border-radius: 10px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-      }
+        }
+          * {
+            margin: 0;
+            padding: 0;
+        }
+        .imgbox {
+            display: grid;
+            height: 90%;
+        }
+        .center-fit {
+            max-width: 90%;
+            max-height: 90vh;
+            margin: auto;
+        }
+      
     </style>
         </head>
         <body> <h1>A website to gather some memes!</h1>
         <p>Here is your meme! This will refresh in 30 seconds!</p> 
-        <p><img src="{{meme_pic}}"></p>
+        
+        <div class="imgbox">
+          <img class="center-fit" src="{{meme_pic}}">
+      </div>
         <p>Current subreddit: {{subreddit}} </p> 
     </body> 
 </html>
